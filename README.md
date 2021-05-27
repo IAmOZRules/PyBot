@@ -10,7 +10,7 @@ This chatbot has a Command Line Interface (CLI), and a Graphical User Interface 
 
 ## Setup:
 1. Make sure ```pytorch```, ```numpy```, ```tkinter``` and ```nltk``` are installed.
-> If not, run ```pip install tkinter torch numpy nltk torchvision```
+> If not, run ```pip install tk torch numpy nltk torchvision```
 2. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
 3. Navigate to the repository folder using ```cd Rude-Chatbot```
 
