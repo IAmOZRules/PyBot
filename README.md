@@ -51,4 +51,4 @@ python chatbot.py --train intents.json
 - [x] Combine all tasks into a single CLI ✅
 - [ ] Add support for training multiple intents at once
 
-## This project is a major overhaul of the similar project [Rude-ChatBot](https://github.com/IAmOZRules/Rude-Chatbot)
+#### This project is a major overhaul of the [Rude-ChatBot](https://github.com/IAmOZRules/Rude-Chatbot) Project.
