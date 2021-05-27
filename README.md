@@ -3,11 +3,10 @@ A chatbot written in Python using NLTK and PyTorch with a GUI created using Tkin
 
 This chatbot has a Command Line Interface (CLI), and a Graphical User Interface (GUI).
 
-### Graphical User Interface
-<img width="400" style="text-align:center;" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/gui.png?raw=true" />
 
-### Command Line Interface
-<img width="400" style="text-align:center;" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/cli.png?raw=true" />
+| **Graphical User Interface**      | **Command Line Interface**      |
+|------------|-------------|
+|<img width="500" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/gui.png?raw=true" />|<img width="500"  src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/cli.png?raw=true" />|
 
 ## Setup:
 1. Make sure ```pytorch```, ```numpy```, ```tkinter``` and ```nltk``` are installed.
