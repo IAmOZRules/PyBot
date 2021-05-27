@@ -1,0 +1,534 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi, there",
+                "How are you?",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Yo",
+                "Hi"
+            ],
+            "responses": [
+                "Hello! Nice to have you here!",
+                "Hey you! Good to see you again.",
+                "Hi there, how can I help you?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting to you, bye",
+                "Till next time"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day!",
+                "Bye! Come back again soon!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, I cannot understand you...",
+                "Please give me more info...",
+                "I'm not sure I understand..."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How would you help me?",
+                "What help do you provide?",
+                "How you can be helpful?"
+            ],
+            "responses": [
+                "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
+                "I can provide support related to following problems: \n\nTechnical Issues\nManagement Issues\nOrder-related issues\nOutsourcing issues\n\nand much more"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "order_tracking",
+            "patterns": [
+                "Where is order number 431B67?",
+                "Track order 562B78",
+                "Where is my order with id 561A24?",
+                "I did not receive my order!"
+            ],
+            "responses": [
+                "I'm sorry, but your order has been delayed...",
+                "Your order has been dispatched. You will receive it soon!",
+                "Your order is on the way to you as we speak!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "search_person_by_id",
+            "patterns": [
+                "I want an appointment with Manoj kumar",
+                "set an appointment with Sujata Nandi"
+            ],
+            "responses": [
+                "Sure. Your appointment is scheduled at 16:00."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "appointment status",
+            "patterns": [
+                "Is my appointment fixed?",
+                "Do I have an appointment today?"
+            ],
+            "responses": [
+                "Yes, you have an appointment at 13:00 today!",
+                "I'm sorry, but I don'y see any appoinments for you today."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cost_lowering",
+            "patterns": [
+                "Cost Lowering changes to be made?",
+                "what changes could lower cost?"
+            ],
+            "responses": [
+                "Increase the Transportation Capacity Utilisation",
+                "Increase Supply Chain Velocity",
+                "Reduce Order Variability"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "forgot_password",
+            "patterns": [
+                "I forgot my Login password?",
+                "what to do when someone forgets Login password?",
+                "I forgot my Laptop password",
+                "Forgot Wifi password"
+            ],
+            "responses": [
+                "Please enter your associated Email ID. We will send you a link shortly thereafter."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "email_id",
+            "patterns": [
+                "abx@gmail.com",
+                "abc@kiit.ac.in"
+            ],
+            "responses": [
+                "A link has been sent to your email. Please reset your password using the same. Thank you for being patient!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "manufacturing_problems",
+            "patterns": [
+                "Find me a manufacturer nearby"
+            ],
+            "responses": [
+                "The nearest manufacturer is in Vietnam."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "search_department",
+            "patterns": [
+                "I want to know the various departments in this company"
+            ],
+            "responses": [
+                "The department are: \n1. Projects\n2. IT\n3. Production\n4. Outsourcing"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "key_customers",
+            "patterns": [
+                "Our Target customers",
+                "who are your key customers"
+            ],
+            "responses": [
+                "Our target customers lie between 20-40 years in age."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "supplier_info",
+            "patterns": [
+                "What information is shared with supplier?"
+            ],
+            "responses": [
+                "We share the following information with out suppliers as per policy: \n1. Production Schedule\n2. Delivery Schedule\n3. Proxy information about cost"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "highest_grossing",
+            "patterns": [
+                "What is the highest grossing product?"
+            ],
+            "responses": [
+                "The HP Envy Foldable Laptop is one of our highest grossing products!",
+                "The Lenovo Laptop Stand is one of our highest grossing products!",
+                "The Galaxy S21 is one of our highest grossing products!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "connect_people",
+            "patterns": [
+                "I want to meet the head of department",
+                "I want to meet head IT Rakesh sharma."
+            ],
+            "responses": [
+                "Please hold on one minute. I shall check if he is available right now..."
+            ],
+            "context": [
+                "search_attendance_database_name_post"
+            ]
+        },
+        {
+            "tag": "project_handling_queries",
+            "patterns": [
+                "complaint has been raised for Insufficient Team Skills",
+                "Miscommunication Conflicts needs to be resolved",
+                "Risk Management issue has occured",
+                "skilled employees needed urgently"
+            ],
+            "responses": [
+                "Please contact the Project Department!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "solve_problems",
+            "patterns": [
+                "Lack of product clarity",
+                "the specifications of product is not clear to customer. what should we do"
+            ],
+            "responses": [
+                "Please enter Product ID and Customer ID. One of out team members will be contacting you soon regarding this issue!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "version_update",
+            "patterns": [
+                "user needs the updated software version",
+                "user demands software updation"
+            ],
+            "responses": [
+                "version Updation Request (ID: AE562H) has been raised."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "HR_related_problem",
+            "patterns": [
+                "problem related to Job design and analysis",
+                "query based on Workforce planning",
+                "Training and development issues are to be handled",
+                "Compensation and benefits of the working employee",
+                "Legal issues of department like accidents in the company"
+            ],
+            "responses": [
+                "Please Contact Human Resources regarding this issue."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "factors_impacting_sale",
+            "patterns": [
+                "Impact on sale?",
+                "factors impacting sale this year?"
+            ],
+            "responses": [
+                "Elections are sure to impact our sales this year...",
+                "Our analysis suggests that sales might increase during Festive Seasons...",
+                "Sales Analysists say that this year is going to the brightest!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "predict_performance",
+            "patterns": [
+                "how have we improved our sale from last year?",
+                "what is the profit this year?"
+            ],
+            "responses": [
+                "Sales have improved by 15% with an increase in the number of customers!",
+                "The quarterly profits are 10%"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "customer_satisfaction",
+            "patterns": [
+                "how was the customer response",
+                "Is the customer happy?",
+                "what was the customer feedback?"
+            ],
+            "responses": [
+                "Customers were very happy and have given us a rating of 5 stars!",
+                "Customers were happy and have given us a rating of 4 stars!",
+                "Customers were moderately happy and have given us a rating of 3 stars!",
+                "Customers were not happy and have given us a rating of 2 stars!",
+                "Customers were dissatisfied and have given us a rating of 1 stars!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "maintainence",
+            "patterns": [
+                "lift is not working", "projector misfuctioning"
+            ],
+            "responses": [
+                "Your issues have been recorded and forwarded to the Maintainence Team. Thanks for your patience!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "gadgets",
+            "patterns": [
+                "what are the gadgets in stock?",
+                "which products we have?"
+            ],
+            "responses": [
+                "We have the following items in stock:\n1. External Hard Drives\n2. Laptop Stands\n3. Gaming Accessories\n4. Wireless Headphones\n5. Keyboard Switches"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "commission",
+            "patterns": [
+                "what is the Commission rate?",
+                "Commission rate on each product?"
+            ],
+            "responses": [
+                "Commission rates are: \n  10% on Laptops/Tablets\n  5% on Bluetooth Device\n  15% on Desktop Components"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "invalid",
+            "patterns": [
+                "Marry me",
+                "I love You",
+                "date me",
+                "chat with me",
+                "I am bored"
+            ],
+            "responses": [
+                "I'm sorry, but I am programmed to reply only to Organisational Related Queries!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noans",
+            "patterns": [
+                "why",
+                "how",
+                "when",
+                "I",
+                "you"
+            ],
+            "responses": [
+                "I'm sorry, but I don't understand you.",
+                "I'm sorry, I do not understand."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "predict_delay",
+            "patterns": [
+                "why is order 23A12 delayed"
+            ],
+            "responses": [
+                "Delay is due to Manufacuring Issues.",
+                "Delay is due to Unavailable Components."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "predict_delay",
+            "patterns": [
+                "why is order 23A12 delayed"
+            ],
+            "responses": [
+                "Delay is due to Manufacuring Issues.",
+                "Delay is due to Unavailable Components."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "How you doing?",
+                "How are you?"
+            ],
+            "responses": [
+                "I'm good, thank you! How may I help you today?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "configuration",
+            "patterns": [
+                "How to configure my laptop",
+                "software configuration of laptop",
+                "steps to configure laptop",
+                "How to configure my computer",
+                "software configuration of computer",
+                "steps to configure computer",
+                "How to configure my desktop",
+                "software configuration of desktop",
+                "steps to configure desktop"
+            ],
+            "responses": [
+                "Here are the steps:\nSearch Tab -> Control Panel -> Select Application -> Download Update"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "Opening hours of the cafeteria?",
+                "when does the cafeteria open",
+                "office canteen opening time"
+            ],
+            "responses": [
+                "The cafeteria is open on Mondays through Saturdays from 9:00am to 7:30pm"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cabin",
+            "patterns": [
+                "where is VP cabin?",
+                "Where is Head IT cabin?",
+                "Where is AI department",
+                "Where is Project head department?",
+                "where is cafeteria",
+                "guide me to the canteen"
+            ],
+            "responses": [
+                "Block-A, 3rd floor 1st room",
+                "Block-B, 2nd Floor",
+                "Block-D, Ground Floor"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "domain",
+            "patterns": [
+                "How to improve team members domain knowledge",
+                "improving domain knowledge of team members"
+            ],
+            "responses": [
+                "Set up Key Meetings and Workshops.",
+                "Create a Shared Drive for Information.",
+                "Hold Informal Sharing Session."
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}
