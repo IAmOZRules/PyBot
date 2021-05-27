@@ -1,5 +1,5 @@
 # PyBot
-A chatbot written in Python using NLTK and PyTorch.
+A chatbot written in Python using NLTK and PyTorch with a GUI created using Tkinter.
 
 This chatbot has a Command Line Interface (CLI), and a Graphical User Interface (GUI).
 
@@ -10,8 +10,8 @@ This chatbot has a Command Line Interface (CLI), and a Graphical User Interface 
 <img width="400" style="text-align:center;" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/cli.png?raw=true" />
 
 ## Setup:
-1. Make sure ```pytorch```, ```numpy```, and ```nltk``` are installed.
-> If not, run ```pip install torch numpy nltk torchvision```
+1. Make sure ```pytorch```, ```numpy```, ```tkinter``` and ```nltk``` are installed.
+> If not, run ```pip install tkinter torch numpy nltk torchvision```
 2. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
 3. Navigate to the repository folder using ```cd Rude-Chatbot```
 
@@ -51,3 +51,5 @@ python chatbot.py --train intents.json
 - [x] Customize the Command Line Output ✅
 - [x] Combine all tasks into a single CLI ✅
 - [ ] Add support for training multiple intents at once
+
+## This project is a major overhaul of the similar project [Rude-ChatBot](https://github.com/IAmOZRules/Rude-Chatbot)
