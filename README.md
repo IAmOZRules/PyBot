@@ -3,7 +3,13 @@ A chatbot written in Python using NLTK and PyTorch.
 
 This chatbot has a Command Line Interface (CLI), and a Graphical User Interface (GUI).
 
-## Setup Before Running:
+### Graphical User Interface
+<img width="400" style="text-align:center;" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/gui.png?raw=true" />
+
+### Command Line Interface
+<img width="400" style="text-align:center;" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/cli.png?raw=true" />
+
+## Setup:
 1. Make sure ```pytorch```, ```numpy```, and ```nltk``` are installed.
 > If not, run ```pip install torch numpy nltk torchvision```
 2. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
