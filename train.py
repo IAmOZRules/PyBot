@@ -1,5 +1,6 @@
 import json
 import numpy as np
+from termcolor import colored
 
 import torch
 import torch.nn as nn
@@ -16,6 +17,8 @@ def trainModel(intent_file):
     all_words = []
     tags = []
     xy = []
+
+    print(colored("\n<-- Initializing Model Training -->", "red"))
 
     for intent in intents['intents']:
         tag = intent['tag']
@@ -68,29 +71,38 @@ def trainModel(intent_file):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = NeuralNet(input_size, hidden_size, output_size)
 
-    # loss and optimizer
+    # Measures the performance of the classification model (loss)
+    # Greater Cross Entropy Loss means greater probability divergence from the actual label
     criterion = nn.CrossEntropyLoss()
+
+    # Model Optimizer
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
+    # Repeatedly trains the model for a set amount of times
     for epoch in range(num_epochs):
         for (words, labels) in train_loader:
             words = words.to(device)
             labels = labels.to(device)
 
-            #forward
+            # Forward Pass Step for the Neural Network
             outputs = model(words)
             loss = criterion(outputs, labels.long())
 
-            # backward and optimizer
-            optimizer.zero_grad()
+            # Backward Pass Step for the Neural Network
+            optimizer.zero_grad()           # Emptying the gradients before beginning backward pass
             loss.backward()
+
+            # Optimizer Step
             optimizer.step()
 
+        # Print results after every 100 epochs
         if (epoch +1) % 100 == 0:
             print(f'epoch {epoch+1}/{num_epochs}, loss={loss.item():.4f}')
 
+    print(colored("<-- Model Training Completed -->", "red"))
     print(f'\nFinal loss, loss={loss.item():.4f}')
 
+    # Save the data into a file so thhat the chatbot can use it later
     data = {
         "model_state": model.state_dict(),
         "input_size": input_size,
@@ -103,6 +115,5 @@ def trainModel(intent_file):
     FILE = "data.pth"
     torch.save(data, FILE)
 
-    print(f"\nTraining Complete. File saved to '{FILE}'.")
+    print(f"Training Data saved to", colored(FILE, "green"))
 
-trainModel("intents.json")

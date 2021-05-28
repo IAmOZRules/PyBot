@@ -21,9 +21,10 @@ class ChatApplication:
         self.window.resizable(width=False, height=False)
         self.window.configure(width=700, height=500, bg="#001437")
 
-        # # Head Label
-        # head_label = Label(self.window, bg="#99BCDA", fg=TEXT_COLOR, text="PyBot - Your Virtual Assistant", font=FONT_BOLD, pady=10)
-        # head_label.place(relwidth=1)
+        # Head Label
+        label_header = f"Hello, there! I am {bot_name}! Let's Chat!\n"
+        head_label = Label(self.window, bg="#001437", fg="#B8FB3C", text=label_header, font="AdHoc 18", pady=0, bd=2)
+        head_label.place(relwidth=1)
 
         # Divider
         line = Label(self.window, width=450, bg=BG_GRAY)
@@ -33,7 +34,6 @@ class ChatApplication:
         self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=10, pady=10,
                                 spacing1=2, spacing2=1, spacing3=1, wrap=WORD)
         self.text_widget.place(relheight=0.75, relwidth=1, rely=0.072)
-        # self.text_widget.insert(END, f"Hello! I am {bot_name}! Let's Chat!")
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
         # Scroll bar
