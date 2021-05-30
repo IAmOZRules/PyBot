@@ -74,7 +74,9 @@
             "patterns": [
                 "How would you help me?",
                 "What help do you provide?",
-                "How you can be helpful?"
+                "How you can be helpful?",
+                "How can you help me?",
+                "What can you do for me?"
             ],
             "responses": [
                 "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
@@ -89,7 +91,7 @@
             "patterns": [
                 "Where is order number 431B67?",
                 "Track order 562B78",
-                "Where is my order with id 561A24?",
+                "Where is order number 561A24?",
                 "I did not receive my order!"
             ],
             "responses": [
@@ -105,10 +107,12 @@
             "tag": "search_person_by_id",
             "patterns": [
                 "I want an appointment with Manoj kumar",
-                "set an appointment with Sujata Nandi"
+                "Set an appointment with Sujata Nandi"
             ],
             "responses": [
-                "Sure. Your appointment is scheduled at 16:00."
+                "Sure. Your appointment is scheduled at 16:00.",
+                "I'm sorry, but today is totally booked.",
+                "I'm sorry, but today would not be possible!"
             ],
             "context": [
                 ""
@@ -122,22 +126,7 @@
             ],
             "responses": [
                 "Yes, you have an appointment at 13:00 today!",
-                "I'm sorry, but I don'y see any appoinments for you today."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "cost_lowering",
-            "patterns": [
-                "Cost Lowering changes to be made?",
-                "what changes could lower cost?"
-            ],
-            "responses": [
-                "Increase the Transportation Capacity Utilisation",
-                "Increase Supply Chain Velocity",
-                "Reduce Order Variability"
+                "I'm sorry, but I don't see any appoinments for you today."
             ],
             "context": [
                 ""
@@ -147,12 +136,14 @@
             "tag": "forgot_password",
             "patterns": [
                 "I forgot my Login password?",
-                "what to do when someone forgets Login password?",
-                "I forgot my Laptop password",
-                "Forgot Wifi password"
+                "What do I do if I forget my password?",
+                "I forgot my laptop password!",
+                "I forgot my WiFi password.",
+                "I forgot my password. What do I do?"
             ],
             "responses": [
-                "Please enter your associated Email ID. We will send you a link shortly thereafter."
+                "Please enter your associated Email ID. We will send you a link shortly thereafter.",
+                "Please enter your registered Email ID. We will send you a link shortly thereafter."
             ],
             "context": [
                 ""
@@ -165,7 +156,8 @@
                 "abc@kiit.ac.in"
             ],
             "responses": [
-                "A link has been sent to your email. Please reset your password using the same. Thank you for being patient!"
+                "A link has been sent to you. Please reset your password using the same. Thank you for being patient!",
+                "We have sent you a link on your email! You can now reset your password using the same."
             ],
             "context": [
                 ""
@@ -174,35 +166,15 @@
         {
             "tag": "manufacturing_problems",
             "patterns": [
-                "Find me a manufacturer nearby"
+                "Find me a manufacturer nearby.",
+                "Where is your nearest manufacturer?",
+                "I would like to know the location of your nearest manufacturer.",
+                "Where is your manufacturer?"
             ],
             "responses": [
-                "The nearest manufacturer is in Vietnam."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "search_department",
-            "patterns": [
-                "I want to know the various departments in this company"
-            ],
-            "responses": [
-                "The department are: \n1. Projects\n2. IT\n3. Production\n4. Outsourcing"
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "key_customers",
-            "patterns": [
-                "Our Target customers",
-                "who are your key customers"
-            ],
-            "responses": [
-                "Our target customers lie between 20-40 years in age."
+                "The nearest manufacturer is in Vietnam.",
+                "The nearest manufacturer is located in India.",
+                "I'm sorry, but we order all our stock directly from other retailers."
             ],
             "context": [
                 ""
@@ -211,10 +183,15 @@
         {
             "tag": "supplier_info",
             "patterns": [
-                "What information is shared with supplier?"
+                "What information is shared with supplier?",
+                "What information do you share with your suppliers?",
+                "What information do your suppliers know about your company?",
+                "What data about your company is shared with other suppliers?"
             ],
             "responses": [
-                "We share the following information with out suppliers as per policy: \n1. Production Schedule\n2. Delivery Schedule\n3. Proxy information about cost"
+                "We share the following information with out suppliers as per policy: \n1. Production Schedule\n2. Delivery Schedule\n3. Proxy information about cost",
+                "We do not share any information other than our Production and Delivery Schedules with our suppliers.",
+                "Our suppliers only have access to our Production and Delivery Schedules."
             ],
             "context": [
                 ""
@@ -223,7 +200,10 @@
         {
             "tag": "highest_grossing",
             "patterns": [
-                "What is the highest grossing product?"
+                "What is the highest grossing product?",
+                "Which is yout highest grossing product?",
+                "What is your highest selling product?",
+                "What is your most selling product?"
             ],
             "responses": [
                 "The HP Envy Foldable Laptop is one of our highest grossing products!",
@@ -235,41 +215,15 @@
             ]
         },
         {
-            "tag": "connect_people",
-            "patterns": [
-                "I want to meet the head of department",
-                "I want to meet head IT Rakesh sharma."
-            ],
-            "responses": [
-                "Please hold on one minute. I shall check if he is available right now..."
-            ],
-            "context": [
-                "search_attendance_database_name_post"
-            ]
-        },
-        {
-            "tag": "project_handling_queries",
-            "patterns": [
-                "complaint has been raised for Insufficient Team Skills",
-                "Miscommunication Conflicts needs to be resolved",
-                "Risk Management issue has occured",
-                "skilled employees needed urgently"
-            ],
-            "responses": [
-                "Please contact the Project Department!"
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
             "tag": "solve_problems",
             "patterns": [
-                "Lack of product clarity",
-                "the specifications of product is not clear to customer. what should we do"
+                "What does this product do?",
+                "It is not clear what this product does",
+                "I cannot understand what this product does."
             ],
             "responses": [
-                "Please enter Product ID and Customer ID. One of out team members will be contacting you soon regarding this issue!"
+                "Please enter the Product ID and your Customer ID. One of out team members will be contacting you soon regarding this issue!",
+                "Please enter the Product ID or name, and we will contact you soon!"
             ],
             "context": [
                 ""
@@ -278,27 +232,14 @@
         {
             "tag": "version_update",
             "patterns": [
-                "user needs the updated software version",
-                "user demands software updation"
+                "I need the latest Version of this software.",
+                "I want to update the software on my device.",
+                "When will I be getting the new software update on my devices?"
             ],
             "responses": [
-                "version Updation Request (ID: AE562H) has been raised."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "HR_related_problem",
-            "patterns": [
-                "problem related to Job design and analysis",
-                "query based on Workforce planning",
-                "Training and development issues are to be handled",
-                "Compensation and benefits of the working employee",
-                "Legal issues of department like accidents in the company"
-            ],
-            "responses": [
-                "Please Contact Human Resources regarding this issue."
+                "The software is rolling out. You should receive it in a few days.",
+                "I'm sorry, but we do not provide software updates to devices older than 3 years.",
+                "There have been no new software releases in the last 3 months."
             ],
             "context": [
                 ""
@@ -307,13 +248,14 @@
         {
             "tag": "factors_impacting_sale",
             "patterns": [
-                "Impact on sale?",
-                "factors impacting sale this year?"
+                "What factors might impact your sales?",
+                "What do you think might affect your sales this year?",
+                "How do you think your sales might be affected this year?"
             ],
             "responses": [
                 "Elections are sure to impact our sales this year...",
                 "Our analysis suggests that sales might increase during Festive Seasons...",
-                "Sales Analysists say that this year is going to the brightest!"
+                "Sales Analysists say that this year is going to be the brightest!"
             ],
             "context": [
                 ""
@@ -322,12 +264,13 @@
         {
             "tag": "predict_performance",
             "patterns": [
-                "how have we improved our sale from last year?",
-                "what is the profit this year?"
+                "How have we improved our sales from last year?",
+                "What is the profit this year?",
+                "How have the profits increased from last year?"
             ],
             "responses": [
                 "Sales have improved by 15% with an increase in the number of customers!",
-                "The quarterly profits are 10%"
+                "The quarterly profits are up by 10%!"
             ],
             "context": [
                 ""
@@ -336,9 +279,11 @@
         {
             "tag": "customer_satisfaction",
             "patterns": [
-                "how was the customer response",
+                "How is the customer response?",
                 "Is the customer happy?",
-                "what was the customer feedback?"
+                "what was the customer feedback?",
+                "How happy are our customers?",
+                "Are our customers satisfied?"
             ],
             "responses": [
                 "Customers were very happy and have given us a rating of 5 stars!",
@@ -352,22 +297,12 @@
             ]
         },
         {
-            "tag": "maintainence",
-            "patterns": [
-                "lift is not working", "projector misfuctioning"
-            ],
-            "responses": [
-                "Your issues have been recorded and forwarded to the Maintainence Team. Thanks for your patience!"
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
             "tag": "gadgets",
             "patterns": [
-                "what are the gadgets in stock?",
-                "which products we have?"
+                "What gadgets do you have in stock?",
+                "What products do you have?",
+                "I would like to know what you are currently selling.",
+                "What is the state of the stock right now?"
             ],
             "responses": [
                 "We have the following items in stock:\n1. External Hard Drives\n2. Laptop Stands\n3. Gaming Accessories\n4. Wireless Headphones\n5. Keyboard Switches"
@@ -380,10 +315,13 @@
             "tag": "commission",
             "patterns": [
                 "what is the Commission rate?",
-                "Commission rate on each product?"
+                "Commission rate on each product?",
+                "How much commission do you give on product sales?"
             ],
             "responses": [
-                "Commission rates are: \n  10% on Laptops/Tablets\n  5% on Bluetooth Device\n  15% on Desktop Components"
+                "Commission rates are: \n  10% on Laptops/Tablets\n  5% on Bluetooth Device\n  15% on Desktop Components",
+                "We provide a 7% commission on all of our products.",
+                "The normal commission rates are 7% on all of our products."
             ],
             "context": [
                 ""
@@ -416,7 +354,8 @@
             ],
             "responses": [
                 "I'm sorry, but I don't understand you.",
-                "I'm sorry, I do not understand."
+                "I'm sorry, I do not understand.",
+                "Please do not ask questions without context."
             ],
             "context": [
                 ""
@@ -425,24 +364,16 @@
         {
             "tag": "predict_delay",
             "patterns": [
-                "why is order 23A12 delayed"
+                "Why has my order been delayed?",
+                "Why is order number 1234 delayed?",
+                "Product #1234 has been delayed. Why?",
+                "Why has the product with ID 1234 has not yet arrived?"
             ],
             "responses": [
                 "Delay is due to Manufacuring Issues.",
-                "Delay is due to Unavailable Components."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "predict_delay",
-            "patterns": [
-                "why is order 23A12 delayed"
-            ],
-            "responses": [
-                "Delay is due to Manufacuring Issues.",
-                "Delay is due to Unavailable Components."
+                "Delay is due to Unavailable Components.",
+                "I'm sorry, but we are currently out of components",
+                "There is a current shortage of components. I request you to be patient. We are very sorry for your inconvenience :("
             ],
             "context": [
                 ""
@@ -452,10 +383,13 @@
             "tag": "about",
             "patterns": [
                 "How you doing?",
-                "How are you?"
+                "How are you?",
+                "How do you do?"
             ],
             "responses": [
-                "I'm good, thank you! How may I help you today?"
+                "I'm good, thank you! How may I help you today?",
+                "I'm doing great! How would you like me to help you?",
+                ""
             ],
             "context": [
                 ""
@@ -464,13 +398,13 @@
         {
             "tag": "configuration",
             "patterns": [
-                "How to configure my laptop",
+                "How do I configure my laptop?",
                 "software configuration of laptop",
                 "steps to configure laptop",
-                "How to configure my computer",
+                "How do I configure my computer?",
                 "software configuration of computer",
                 "steps to configure computer",
-                "How to configure my desktop",
+                "How do I configure my desktop?",
                 "software configuration of desktop",
                 "steps to configure desktop"
             ],
@@ -482,48 +416,33 @@
             ]
         },
         {
-            "tag": "hours",
+            "tag": "store_location",
             "patterns": [
-                "Opening hours of the cafeteria?",
-                "when does the cafeteria open",
-                "office canteen opening time"
+                "Where are you located?",
+                "What are the directions to your store?",
+                "How can I get to your store?",
+                "What is your address?"
             ],
             "responses": [
-                "The cafeteria is open on Mondays through Saturdays from 9:00am to 7:30pm"
+                "Block-A, 3rd floor, 1st room on the right.",
+                "Block-B, Room 202, 2nd Floor.",
+                "Block-D, Ground Floor."
             ],
             "context": [
                 ""
             ]
         },
         {
-            "tag": "cabin",
+            "tag": "opening_time",
             "patterns": [
-                "where is VP cabin?",
-                "Where is Head IT cabin?",
-                "Where is AI department",
-                "Where is Project head department?",
-                "where is cafeteria",
-                "guide me to the canteen"
+                "When do you open?",
+                "What hours is the shop open?",
+                "When do you close?",
+                "What days are you open?"
             ],
             "responses": [
-                "Block-A, 3rd floor 1st room",
-                "Block-B, 2nd Floor",
-                "Block-D, Ground Floor"
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "domain",
-            "patterns": [
-                "How to improve team members domain knowledge",
-                "improving domain knowledge of team members"
-            ],
-            "responses": [
-                "Set up Key Meetings and Workshops.",
-                "Create a Shared Drive for Information.",
-                "Hold Informal Sharing Session."
+                "We are open every weekday from 10 am to 7 pm! We are closed on National Holidays.",
+                "We are open from Mondays to Fridays (except National Holidays) from 10 am to 7 pm!"
             ],
             "context": [
                 ""
