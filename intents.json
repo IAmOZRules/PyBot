@@ -76,7 +76,8 @@
                 "How would you help me?",
                 "What help do you provide?",
                 "How you can be helpful?",
-                "Who are you?"
+                "Who are you?",
+                "What can you do?"
             ],
             "responses": [
                 "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
@@ -230,7 +231,8 @@
             "responses": [
                 "The HP Envy Foldable Laptop is one of our highest grossing products!",
                 "The Lenovo Laptop Stand is one of our highest grossing products!",
-                "The Galaxy S21 is one of our highest grossing products!"
+                "The Galaxy S21 is one of our highest grossing products!",
+                "Which is the best selling product?"
             ],
             "context": [
                 ""
