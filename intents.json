@@ -75,14 +75,9 @@
                 "How would you help me?",
                 "What help do you provide?",
                 "How you can be helpful?",
-<<<<<<< HEAD
-                "Who are you?",
-                "What can you do?",
-                "How you can be helpful?"
-=======
                 "How can you help me?",
-                "What can you do for me?"
->>>>>>> e0e7ed7582e1a794b90505d1870a88374db15c0f
+                "What can you do for me?",
+                "What can you do?"
             ],
             "responses": [
                 "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
@@ -395,8 +390,7 @@
             ],
             "responses": [
                 "I'm good, thank you! How may I help you today?",
-                "I'm doing great! How would you like me to help you?",
-                ""
+                "I'm doing great! How would you like me to help you?"
             ],
             "context": [
                 ""

@@ -1,4 +1,91 @@
 {"intents": [
+    {
+            "tag": "greeting",
+            "patterns": [
+                "Hi, there",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Yo",
+                "Hi"
+            ],
+            "responses": [
+                "Hello! Nice to have you here!",
+                "Hey you! Good to see you again.",
+                "Hi there, how can I help you?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting to you, bye",
+                "Till next time"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day!",
+                "Bye! Come back again soon!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, I cannot understand you",
+                "Please give me more information",
+                "I'm not sure I understand"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How would you help me?",
+                "What help do you provide?",
+                "How you can be helpful?",
+                "How can you help me?",
+                "What can you do for me?",
+                "What can you do?"
+            ],
+            "responses": [
+                "I can help provide first aid information about various situations like cuts, snake bites, etc. Please enter one of your queries:",
+                "I give quick first aid information about various kinds of injuries like stings, splinters, etc. Type away one your your situation and we will try to answer: "
+            ],
+            "context": [
+                ""
+            ]
+        },
     {"tag": "Cuts",
      "patterns": ["What to do if Cuts?", "How to cure Cuts?", "Which medicine to apply for Cuts?", "what to apply on cuts?", "Cuts"],
      "responses": ["Wash the cut properly to prevent infection and stop the bleeding by applying pressure for 1-2minutes until bleeding stops. Apply Petroleum Jelly to make sure that the wound is moist for quick healing. Finally cover the cut with a sterile bandage. Pain relievers such as acetaminophen can be applied."],
