@@ -8,7 +8,6 @@ from nltk_utils import tokenize, stem, bag_of_words
 from torch.utils.data import Dataset, DataLoader
 from model import NeuralNet
 
-
 def trainModel(intent_file):
     # Opens the intents.json file
     with open(intent_file, 'r') as f:
@@ -54,10 +53,10 @@ def trainModel(intent_file):
         # dataset(idx)
         def __getitem__(self, index):
             return (self.x_data[index], self.y_data[index])
-
+        
         def __len__(self):
             return self.n_samples
-
+        
     # Hyperparameters
     batch_size = 8
     hidden_size = 8
@@ -67,8 +66,7 @@ def trainModel(intent_file):
     num_epochs = 1000
 
     dataset = ChatDataSet()
-    train_loader = DataLoader(
-        dataset=dataset, batch_size=batch_size, shuffle=True)
+    train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = NeuralNet(input_size, hidden_size, output_size)
@@ -98,7 +96,7 @@ def trainModel(intent_file):
             optimizer.step()
 
         # Print results after every 100 epochs
-        if (epoch + 1) % 100 == 0:
+        if (epoch +1) % 100 == 0:
             print(f'epoch {epoch+1}/{num_epochs}, loss={loss.item():.4f}')
 
     print(colored("<-- Model Training Completed -->", "red"))
@@ -118,3 +116,4 @@ def trainModel(intent_file):
     torch.save(data, FILE)
 
     print(f"Training Data saved to", colored(FILE, "green"))
+
