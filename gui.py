@@ -8,14 +8,15 @@ TEXT_COLOR = "#000000"
 FONT = "Constantia 12"
 FONT_BOLD = "Constantia 14 bold"
 
+
 class ChatApplication:
     def __init__(self):
         self.window = Tk()
         self._setup_main_window()
-    
+
     def run(self):
         self.window.mainloop()
-    
+
     def _setup_main_window(self):
         self.window.title("PyBot")
         self.window.resizable(width=False, height=False)
@@ -23,7 +24,8 @@ class ChatApplication:
 
         # Head Label
         label_header = f"Hello, there! I am {bot_name}! Let's Chat!\n"
-        head_label = Label(self.window, bg="#001437", fg="#B8FB3C", text=label_header, font="AdHoc 18", pady=0, bd=2)
+        head_label = Label(self.window, bg="#001437", fg="#B8FB3C",
+                           text=label_header, font="AdHoc 18", pady=0, bd=2)
         head_label.place(relwidth=1)
 
         # Divider
@@ -42,32 +44,37 @@ class ChatApplication:
         scroll_bar.configure(command=self.text_widget.yview)
 
         # Bottom Label
-        bottom_label = Label(self.window, bg="#B8FB3C", height=3, padx=5, pady=5)
+        bottom_label = Label(self.window, bg="#B8FB3C",
+                             height=3, padx=5, pady=5)
         bottom_label.place(relwidth=1, rely=0.825)
 
         # Message Entry Box
-        self.msg_entry = Entry(bottom_label, font=FONT, bd=3, highlightbackground ="black", highlightcolor="black")
-        
-        self.msg_entry.place(relwidth=0.74, relheight=0.9, rely=0.012, relx=0.01)
+        self.msg_entry = Entry(bottom_label, font=FONT, bd=3,
+                               highlightbackground="black", highlightcolor="black")
+
+        self.msg_entry.place(relwidth=0.74, relheight=0.9,
+                             rely=0.012, relx=0.01)
         self.msg_entry.focus()
         self.msg_entry.bind("<Return>", self._on_enter_pressed)
 
         # Send Button
-        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY, 
-                             bd=3, highlightbackground ="white", highlightcolor="white",
+        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY,
+                             bd=3, highlightbackground="white", highlightcolor="white",
                              command=lambda: self._on_enter_pressed(None))
         send_button.place(relx=0.77, rely=0.012, relheight=0.9, relwidth=0.22)
-    
+
     def _on_enter_pressed(self, event):
         msg = self.msg_entry.get()
         self._insert_message(msg, "You")
-    
+
     def _insert_message(self, msg, sender):
         if not msg:
             return
-        
-        self.text_widget.tag_config("you", background="#5CE5D5", font=("AdHoc 13"))
-        self.text_widget.tag_config("chatbot", background="#7898FB", font=("AdHoc 13"))
+
+        self.text_widget.tag_config(
+            "you", background="#5CE5D5", font=("AdHoc 13"))
+        self.text_widget.tag_config(
+            "chatbot", background="#7898FB", font=("AdHoc 13"))
 
         self.msg_entry.delete(0, END)
         msg1_sender = f"{sender}:"
