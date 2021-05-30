@@ -4,7 +4,6 @@
             "tag": "greeting",
             "patterns": [
                 "Hi, there",
-                "How are you?",
                 "Is anyone there?",
                 "Hey",
                 "Hola",
@@ -75,8 +74,7 @@
             "patterns": [
                 "How would you help me?",
                 "What help do you provide?",
-                "How you can be helpful?",
-                "Who are you?"
+                "How you can be helpful?"
             ],
             "responses": [
                 "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
