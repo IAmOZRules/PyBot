@@ -49,6 +49,7 @@ python chatbot.py --train intents.json
 - [x] Add a GUI ✅
 - [x] Customize the Command Line Output ✅
 - [x] Combine all tasks into a single CLI ✅
-- [ ] Add support for training multiple intents at once
+- [ ] Add support for training multiple intents at once ❌ (Seems dumb, not gonna do it)
+- [ ] Voice Input/Output
 
 #### This project is a major overhaul of the [Rude-ChatBot](https://github.com/IAmOZRules/Rude-Chatbot) Project.
