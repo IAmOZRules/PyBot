@@ -5,8 +5,8 @@ class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
         super(NeuralNet, self).__init__()
         self.l1 = nn.Linear(input_size, hidden_size)    # Input Layer
-        self.l2 = nn.Linear(hidden_size, hidden_size)   # Hidden Layer
-        self.l3 = nn.Linear(hidden_size, num_classes)   # Output Layer
+        self.l2 = nn.Linear(hidden_size, hidden_size)   # Hidden Layer 1
+        self.l3 = nn.Linear(hidden_size, num_classes)   # Hidden Layer 2
         
         """
         Rectified Linear Unit Activation function

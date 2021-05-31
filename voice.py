@@ -22,7 +22,7 @@ def VoiceChat():
                 sentence = r.recognize_google(audio)
                 print(sentence)
                 
-                if sentence == "quit":
+                if sentence == "exit":
                     response = "Thank you for visiting! I hope to see you again!"
                     print(f'{bot_name}: {response}\n')
                     TextToSpeech(response)

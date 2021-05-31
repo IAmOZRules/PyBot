@@ -23,7 +23,7 @@ if __name__ == "__main__":
         while True:
             print(you, end="")
             sentence = input()
-            if sentence == "quit":
+            if sentence == "exit":
                 print(f'{bot_name}: Thank you for visiting! I hope to see you again!\n')
                 break
 
