@@ -9,10 +9,10 @@ This chatbot has a Command Line Interface (CLI), and a Graphical User Interface 
 |<img width="500" src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/gui.png?raw=true" />|<img width="500"  src="https://raw.githubusercontent.com/IAmOZRules/PyBot/master/images/cli.png?raw=true" />|
 
 ## Setup:
-1. Make sure all dependencies are installed.
-- If not, run ```pip install tk torch numpy nltk torchvision pyaudio pyttsx3 SpeechRecognition``` or ```pip install -r requirements.txt```
-2. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
-3. Navigate to the repository folder using ```cd Rude-Chatbot```
+1. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
+2. Navigate to the repository folder using ```cd Rude-Chatbot```
+3. Make sure all dependencies are installed.
+ If not, run ```pip install -r requirements.txt```
 
 ## Usage:
 
