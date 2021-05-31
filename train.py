@@ -8,6 +8,7 @@ from nltk_utils import tokenize, stem, bag_of_words
 from torch.utils.data import Dataset, DataLoader
 from model import NeuralNet
 
+
 def trainModel(intent_file):
     # Opens the intents.json file
     with open(intent_file, 'r') as f:
@@ -16,6 +17,7 @@ def trainModel(intent_file):
     ignore_words = ['?', "!", ".", ","]
     all_words = []
     tags = []
+    # xy will contain tokenized pattern sentence with it's respective tag
     xy = []
 
     print(colored("\n<-- Initializing Model Training -->", "red"))
@@ -53,10 +55,10 @@ def trainModel(intent_file):
         # dataset(idx)
         def __getitem__(self, index):
             return (self.x_data[index], self.y_data[index])
-        
+
         def __len__(self):
             return self.n_samples
-        
+
     # Hyperparameters
     batch_size = 8
     hidden_size = 8
@@ -66,7 +68,8 @@ def trainModel(intent_file):
     num_epochs = 1000
 
     dataset = ChatDataSet()
-    train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True)
+    train_loader = DataLoader(
+        dataset=dataset, batch_size=batch_size, shuffle=True)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = NeuralNet(input_size, hidden_size, output_size)
@@ -88,21 +91,23 @@ def trainModel(intent_file):
             outputs = model(words)
             loss = criterion(outputs, labels.long())
 
+            # Emptying the gradients before beginning backward pass
+            optimizer.zero_grad()
+
             # Backward Pass Step for the Neural Network
-            optimizer.zero_grad()           # Emptying the gradients before beginning backward pass
             loss.backward()
 
-            # Optimizer Step
+            # update the parameters by gradient descent
             optimizer.step()
 
         # Print results after every 100 epochs
-        if (epoch +1) % 100 == 0:
+        if (epoch + 1) % 100 == 0:
             print(f'epoch {epoch+1}/{num_epochs}, loss={loss.item():.4f}')
 
     print(colored("<-- Model Training Completed -->", "red"))
     print(f'\nFinal loss, loss={loss.item():.4f}')
 
-    # Save the data into a file so thhat the chatbot can use it later
+    # Save the data into a file so that the chatbot can use it later
     data = {
         "model_state": model.state_dict(),
         "input_size": input_size,
@@ -116,4 +121,3 @@ def trainModel(intent_file):
     torch.save(data, FILE)
 
     print(f"Training Data saved to", colored(FILE, "green"))
-
