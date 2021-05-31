@@ -7,9 +7,7 @@ from nltk_utils import bag_of_words, tokenize
 # use GPU if available else CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-intent_file = input("Enter the name of the intents file: ")
-with open(intent_file, 'r') as f:
-    intents = json.load(f)
+# intent_file = input("Enter the name of the intents file: ")
 
 FILE = "data.pth"
 data = torch.load(FILE)
@@ -21,6 +19,10 @@ output_size = data["output_size"]
 all_words = data["all_words"]
 tags = data["tags"]
 model_state = data["model_state"]
+intent_file = data["intent_file"]
+
+with open(intent_file, 'r') as f:
+    intents = json.load(f)
 
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
 # load the weights after training before

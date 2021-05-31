@@ -114,7 +114,8 @@ def trainModel(intent_file):
         "output_size": output_size,
         "hidden_size": hidden_size,
         "all_words": all_words,
-        "tags": tags
+        "tags": tags,
+        "intent_file": intent_file
     }
 
     FILE = "data.pth"
