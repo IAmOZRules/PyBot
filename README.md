@@ -1,7 +1,7 @@
 # PyBot
 A chatbot written in Python using NLTK and PyTorch with a GUI created using Tkinter.
 
-This chatbot has a Command Line Interface (CLI), and a Graphical User Interface (GUI).
+This chatbot has a Command Line Interface (CLI), and a Graphical User Interface (GUI), along with Voice Chat (Voice Input and Output).
 
 
 | **Graphical User Interface**      | **Command Line Interface**      |
