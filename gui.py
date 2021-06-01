@@ -15,8 +15,8 @@ class ChatApplication:
         self.window.configure(width=700, height=500, bg="#001437")
 
         # Head Label
-        label_header = f"Hello, there! I am {bot_name}! Let's Chat!\n"
-        head_label = Label(self.window, bg="#001437", fg="#B8FB3C", text=label_header, font="AdHoc 18", pady=0, bd=2)
+        label_header = f"Hello, there! I am {bot_name}! Type 'exit' to stop chatting...!\n"
+        head_label = Label(self.window, bg="#001437", fg="#B8FB3C", text=label_header, font="AdHoc 15", pady=0, bd=2)
         head_label.place(relwidth=1)
 
         # Divider
@@ -54,22 +54,26 @@ class ChatApplication:
         if not msg:
             return
         
-        self.text_widget.tag_config("you", background="#5CE5D5", font=("AdHoc 13"))
-        self.text_widget.tag_config("chatbot", background="#7898FB", font=("AdHoc 13"))
+        if msg == "exit":
+            self.window.destroy()
+        
+        else:
+            self.text_widget.tag_config("you", background="#5CE5D5", font=("AdHoc 13"))
+            self.text_widget.tag_config("chatbot", background="#7898FB", font=("AdHoc 13"))
 
-        self.msg_entry.delete(0, END)
-        msg1_sender = f"{sender}:"
-        msg1_msg = f" {msg}\n"
-        self.text_widget.configure(state=NORMAL)
-        self.text_widget.insert(END, msg1_sender, "you")
-        self.text_widget.insert(END, msg1_msg)
-        self.text_widget.configure(state=DISABLED)
+            self.msg_entry.delete(0, END)
+            msg1_sender = f"{sender}:"
+            msg1_msg = f" {msg}\n"
+            self.text_widget.configure(state=NORMAL)
+            self.text_widget.insert(END, msg1_sender, "you")
+            self.text_widget.insert(END, msg1_msg)
+            self.text_widget.configure(state=DISABLED)
 
-        msg2_bot = f"{bot_name}:"
-        msg2_msg = f" {get_response(msg)}\n\n"
-        self.text_widget.configure(state=NORMAL)
-        self.text_widget.insert(END, msg2_bot, "chatbot")
-        self.text_widget.insert(END, msg2_msg)
-        self.text_widget.configure(state=DISABLED)
+            msg2_bot = f"{bot_name}:"
+            msg2_msg = f" {get_response(msg)}\n\n"
+            self.text_widget.configure(state=NORMAL)
+            self.text_widget.insert(END, msg2_bot, "chatbot")
+            self.text_widget.insert(END, msg2_msg)
+            self.text_widget.configure(state=DISABLED)
 
-        self.text_widget.see(END)
+            self.text_widget.see(END)
