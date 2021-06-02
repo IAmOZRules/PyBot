@@ -209,8 +209,7 @@
             "responses": [
                 "The HP Envy Foldable Laptop is one of our highest grossing products!",
                 "The Lenovo Laptop Stand is one of our highest grossing products!",
-                "The Galaxy S21 is one of our highest grossing products!",
-                "Which is the best selling product?"
+                "The Galaxy S21 is one of our highest grossing products!"
             ],
             "context": [
                 ""
@@ -304,7 +303,9 @@
                 "What gadgets do you have in stock?",
                 "What products do you have?",
                 "I would like to know what you are currently selling.",
-                "What is the state of the stock right now?"
+                "What is the state of the stock right now?",
+                "What gadgets do you sell?",
+                "What products do you sell?"
             ],
             "responses": [
                 "We have the following items in stock:\n1. External Hard Drives\n2. Laptop Stands\n3. Gaming Accessories\n4. Wireless Headphones\n5. Keyboard Switches"
