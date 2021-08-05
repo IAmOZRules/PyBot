@@ -10,7 +10,7 @@ This chatbot has a Command Line Interface (CLI), and a Graphical User Interface 
 
 ## Setup:
 1. Clone the repository using ```git clone https://github.com/IAmOZRules/PyBot.git```
-2. Navigate to the repository folder using ```cd Rude-Chatbot```
+2. Navigate to the repository folder using ```cd PyBot```
 3. Make sure all dependencies are installed.
  If not, run ```pip install -r requirements.txt```
 
