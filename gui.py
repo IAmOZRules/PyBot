@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, Label, Text, DISABLED, Entry, Button, END, NORMAL
 from chat import get_response, bot_name
 
 class ChatApplication:
