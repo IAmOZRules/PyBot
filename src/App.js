@@ -6,10 +6,16 @@ import UserMSG from "./components/UserMSG";
 function App() {
   const [messages, setMessages] = useState([]);
   const userRef = useRef();
+  const boxRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
     const mess = userRef.current.value;
+    if (mess === "") {
+      alert("Please enter a message...");
+      return;
+    }
+
     fetch("http://127.0.0.1:8000/api/bot-response", {
       method: "POST",
       headers: {
@@ -23,6 +29,8 @@ function App() {
         setMessages((prev) => [...prev, { user: mess, bot: jsonObj }]);
         userRef.current.value = "";
       });
+
+    boxRef.current.scrollTop = boxRef.current.scrollHeight * 2;
   };
 
   return (
@@ -46,7 +54,15 @@ function App() {
       >
         Your Messaging history
       </Heading>
-      <Flex flexDir="column" overflowY="auto" alignItems="stretch" h="70%">
+      <Flex
+        flexDir="column"
+        overflowY="auto"
+        alignItems="stretch"
+        h="70%"
+        pb="2rem"
+        ref={boxRef}
+        className="no_scroll"
+      >
         <BotMSG text="Start with typing Hi!" />
         {messages.map((msg, idx) => (
           <Box key={idx}>
