@@ -3,17 +3,15 @@ import json
 import torch
 from .model import NeuralNet
 from .nltk_utils import bag_of_words, tokenize
-import sys, os
-
-sys.path.append(os.path.curdir)
+import pathlib
 
 # use GPU if available else CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # intent_file = input("Enter the name of the intents file: ")
 
-#FILE = "data.pth"
-FILE = r"/mnt/d/Node_Git/Projects/PyBot/PyBot_Django/backend/train/data.pth"
+FILE = pathlib.Path(__file__).parent / "data.pth"
+#FILE = r"/mnt/d/Node_Git/Projects/PyBot/PyBot_Django/backend/train/data.pth"
 data = torch.load(FILE)
 
 # load the hyper params and model_state from the saved file
@@ -25,7 +23,7 @@ tags = data["tags"]
 model_state = data["model_state"]
 intent_file = data["intent_file"]
 
-with open(r"/mnt/d/Node_Git/Projects/PyBot/PyBot_Django/backend/train/intents.json", 'r') as f:
+with open(pathlib.Path(__file__).parent / intent_file, 'r') as f:
     intents = json.load(f)
 
 model = NeuralNet(input_size, hidden_size, output_size).to(device)

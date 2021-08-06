@@ -1,0 +1,454 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi, there",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Yo",
+                "Hi"
+            ],
+            "responses": [
+                "Hello! Nice to have you here!",
+                "Hey you! Good to see you again.",
+                "Hi there, how can I help you?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting to you, bye",
+                "Till next time"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day!",
+                "Bye! Come back again soon!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, I cannot understand you...",
+                "Please give me more info...",
+                "I'm not sure I understand..."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How would you help me?",
+                "What help do you provide?",
+                "How you can be helpful?",
+                "How can you help me?",
+                "What can you do for me?",
+                "What can you do?"
+            ],
+            "responses": [
+                "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
+                "I can provide support related to following problems: \n\nTechnical Issues\nManagement Issues\nOrder-related issues\nOutsourcing issues\n\nand much more"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "order_tracking",
+            "patterns": [
+                "Where is order number 431B67?",
+                "Track order 562B78",
+                "Where is order number 561A24?",
+                "I did not receive my order!"
+            ],
+            "responses": [
+                "I'm sorry, but your order has been delayed...",
+                "Your order has been dispatched. You will receive it soon!",
+                "Your order is on the way to you as we speak!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "search_person_by_id",
+            "patterns": [
+                "I want an appointment with Manoj kumar",
+                "Set an appointment with Sujata Nandi"
+            ],
+            "responses": [
+                "Sure. Your appointment is scheduled at 16:00.",
+                "I'm sorry, but today is totally booked.",
+                "I'm sorry, but today would not be possible!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "appointment status",
+            "patterns": [
+                "Is my appointment fixed?",
+                "Do I have an appointment today?"
+            ],
+            "responses": [
+                "Yes, you have an appointment at 13:00 today!",
+                "I'm sorry, but I don't see any appoinments for you today."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "forgot_password",
+            "patterns": [
+                "I forgot my Login password?",
+                "What do I do if I forget my password?",
+                "I forgot my laptop password!",
+                "I forgot my WiFi password.",
+                "I forgot my password. What do I do?"
+            ],
+            "responses": [
+                "Please enter your associated Email ID. We will send you a link shortly thereafter.",
+                "Please enter your registered Email ID. We will send you a link shortly thereafter."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "email_id",
+            "patterns": [
+                "abx@gmail.com",
+                "abc@kiit.ac.in"
+            ],
+            "responses": [
+                "A link has been sent to you. Please reset your password using the same. Thank you for being patient!",
+                "We have sent you a link on your email! You can now reset your password using the same."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "manufacturing_problems",
+            "patterns": [
+                "Find me a manufacturer nearby.",
+                "Where is your nearest manufacturer?",
+                "I would like to know the location of your nearest manufacturer.",
+                "Where is your manufacturer?"
+            ],
+            "responses": [
+                "The nearest manufacturer is in Vietnam.",
+                "The nearest manufacturer is located in India.",
+                "I'm sorry, but we order all our stock directly from other retailers."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "supplier_info",
+            "patterns": [
+                "What information is shared with supplier?",
+                "What information do you share with your suppliers?",
+                "What information do your suppliers know about your company?",
+                "What data about your company is shared with other suppliers?"
+            ],
+            "responses": [
+                "We share the following information with out suppliers as per policy: \n1. Production Schedule\n2. Delivery Schedule\n3. Proxy information about cost",
+                "We do not share any information other than our Production and Delivery Schedules with our suppliers.",
+                "Our suppliers only have access to our Production and Delivery Schedules."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "highest_grossing",
+            "patterns": [
+                "What is the highest grossing product?",
+                "Which is yout highest grossing product?",
+                "What is your highest selling product?",
+                "What is your most selling product?"
+            ],
+            "responses": [
+                "The HP Envy Foldable Laptop is one of our highest grossing products!",
+                "The Lenovo Laptop Stand is one of our highest grossing products!",
+                "The Galaxy S21 is one of our highest grossing products!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "solve_problems",
+            "patterns": [
+                "What does this product do?",
+                "It is not clear what this product does",
+                "I cannot understand what this product does."
+            ],
+            "responses": [
+                "Please enter the Product ID and your Customer ID. One of out team members will be contacting you soon regarding this issue!",
+                "Please enter the Product ID or name, and we will contact you soon!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "version_update",
+            "patterns": [
+                "I need the latest Version of this software.",
+                "I want to update the software on my device.",
+                "When will I be getting the new software update on my devices?"
+            ],
+            "responses": [
+                "The software is rolling out. You should receive it in a few days.",
+                "I'm sorry, but we do not provide software updates to devices older than 3 years.",
+                "There have been no new software releases in the last 3 months."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "factors_impacting_sale",
+            "patterns": [
+                "What factors might impact your sales?",
+                "What do you think might affect your sales this year?",
+                "How do you think your sales might be affected this year?"
+            ],
+            "responses": [
+                "Elections are sure to impact our sales this year...",
+                "Our analysis suggests that sales might increase during Festive Seasons...",
+                "Sales Analysists say that this year is going to be the brightest!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "predict_performance",
+            "patterns": [
+                "How have we improved our sales from last year?",
+                "What is the profit this year?",
+                "How have the profits increased from last year?"
+            ],
+            "responses": [
+                "Sales have improved by 15% with an increase in the number of customers!",
+                "The quarterly profits are up by 10%!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "customer_satisfaction",
+            "patterns": [
+                "How is the customer response?",
+                "Is the customer happy?",
+                "what was the customer feedback?",
+                "How happy are our customers?",
+                "Are our customers satisfied?"
+            ],
+            "responses": [
+                "Customers were very happy and have given us a rating of 5 stars!",
+                "Customers were happy and have given us a rating of 4 stars!",
+                "Customers were moderately happy and have given us a rating of 3 stars!",
+                "Customers were not happy and have given us a rating of 2 stars!",
+                "Customers were dissatisfied and have given us a rating of 1 stars!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "gadgets",
+            "patterns": [
+                "What gadgets do you have in stock?",
+                "What products do you have?",
+                "I would like to know what you are currently selling.",
+                "What is the state of the stock right now?",
+                "What gadgets do you sell?",
+                "What products do you sell?"
+            ],
+            "responses": [
+                "We have the following items in stock:\n1. External Hard Drives\n2. Laptop Stands\n3. Gaming Accessories\n4. Wireless Headphones\n5. Keyboard Switches"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "commission",
+            "patterns": [
+                "what is the Commission rate?",
+                "Commission rate on each product?",
+                "How much commission do you give on product sales?"
+            ],
+            "responses": [
+                "Commission rates are: \n  10% on Laptops/Tablets\n  5% on Bluetooth Device\n  15% on Desktop Components",
+                "We provide a 7% commission on all of our products.",
+                "The normal commission rates are 7% on all of our products."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "invalid",
+            "patterns": [
+                "Marry me",
+                "I love You",
+                "date me",
+                "chat with me",
+                "I am bored"
+            ],
+            "responses": [
+                "I'm sorry, but I am programmed to reply only to Organisational Related Queries!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noans",
+            "patterns": [
+                "why",
+                "how",
+                "when",
+                "I",
+                "you"
+            ],
+            "responses": [
+                "I'm sorry, but I don't understand you.",
+                "I'm sorry, I do not understand.",
+                "Please do not ask questions without context."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "predict_delay",
+            "patterns": [
+                "Why has my order been delayed?",
+                "Why is order number 1234 delayed?",
+                "Product #1234 has been delayed. Why?",
+                "Why has the product with ID 1234 has not yet arrived?"
+            ],
+            "responses": [
+                "Delay is due to Manufacuring Issues.",
+                "Delay is due to Unavailable Components.",
+                "I'm sorry, but we are currently out of components",
+                "There is a current shortage of components. I request you to be patient. We are very sorry for your inconvenience :("
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "How you doing?",
+                "How are you?",
+                "How do you do?"
+            ],
+            "responses": [
+                "I'm good, thank you! How may I help you today?",
+                "I'm doing great! How would you like me to help you?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "configuration",
+            "patterns": [
+                "How do I configure my laptop?",
+                "software configuration of laptop",
+                "steps to configure laptop",
+                "How do I configure my computer?",
+                "software configuration of computer",
+                "steps to configure computer",
+                "How do I configure my desktop?",
+                "software configuration of desktop",
+                "steps to configure desktop"
+            ],
+            "responses": [
+                "Here are the steps:\nSearch Tab -> Control Panel -> Select Application -> Download Update"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "store_location",
+            "patterns": [
+                "Where are you located?",
+                "What are the directions to your store?",
+                "How can I get to your store?",
+                "What is your address?"
+            ],
+            "responses": [
+                "Block-A, 3rd floor, 1st room on the right.",
+                "Block-B, Room 202, 2nd Floor.",
+                "Block-D, Ground Floor."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "opening_time",
+            "patterns": [
+                "When do you open?",
+                "What hours is the shop open?",
+                "When do you close?",
+                "What days are you open?"
+            ],
+            "responses": [
+                "We are open every weekday from 10 am to 7 pm! We are closed on National Holidays.",
+                "We are open from Mondays to Fridays (except National Holidays) from 10 am to 7 pm!"
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}
