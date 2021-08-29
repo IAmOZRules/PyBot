@@ -60,4 +60,29 @@ python chatbot.py --train intents.json
 - [ ] Add support for training multiple intents at once ❌ (Seems dumb, not gonna do it)
 - [x] Voice Input/Output ✅
 
+## Contributors
+<table style="width: 100%" >
+    <td align="center">
+        <a href="https://github.com/IAmOZRules">
+            <img src="https://avatars.githubusercontent.com/u/63207667?v=4" width="100px;" alt="IAmOZRules" />
+            <br /><sub><b>Shreyaans Nahata</b></sub>
+        </a>
+        <br />
+    </td>
+    <td align="center">
+        <a href="https://github.com/Siddharth-Gandhi">
+            <img src="https://avatars.githubusercontent.com/u/61461606?v=4" width="100px;" alt="IAmOZRules" />
+            <br /><sub><b>Siddharth Gandhi</b></sub>
+        </a>
+        <br />
+    </td>
+    <td align="center">
+        <a href="https://github.com/SaiSridhar783">
+            <img src="https://avatars.githubusercontent.com/u/58875230?v=4" width="100px;" alt="Sai" />
+            <br /><sub><b>Sai Sridhar Akula</b></sub>
+        </a>
+        <br />
+    </td>
+</table>
+
 #### This project is a major overhaul of the [Rude-ChatBot](https://github.com/IAmOZRules/Rude-Chatbot) Project.
