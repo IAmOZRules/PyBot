@@ -48,8 +48,8 @@ python chatbot.py --voice
 ```
 - To train the ChatBot using a different Intent:
 ```
-python chatbot.py -t intents.json
-python chatbot.py --train intents.json
+python chatbot.py -t json/covid.json
+python chatbot.py --train json/covid.json
 ```
 
 ### NOTE:
