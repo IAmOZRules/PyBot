@@ -13,6 +13,8 @@ This chatbot has a Command Line Interface (CLI), and a Graphical User Interface 
 2. Navigate to the repository folder using ```cd PyBot```
 3. Make sure all dependencies are installed.
  If not, run ```pip install -r requirements.txt```
+4. Run ```python nltk_setup.py``` to install the required NLTK libraries.
+5. And now you are good to go!
 
 ## Usage:
 
