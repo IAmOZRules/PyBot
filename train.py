@@ -39,9 +39,9 @@ def trainModel(intent_file):
 
     for (pattern_sentence, tag) in xy:
         bag = bag_of_words(pattern_sentence, all_words)
-        X_train.append(bag)
+        X_train.append(bag)                 # Feature Set
         label = tags.index(tag)
-        Y_train.append(label)
+        Y_train.append(label)               # Label Set
 
     X_train = np.array(X_train)
     Y_train = np.array(Y_train)
