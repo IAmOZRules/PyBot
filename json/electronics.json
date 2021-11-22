@@ -285,6 +285,7 @@
             "tag": "customer_satisfaction",
             "patterns": [
                 "How is the customer response?",
+                "What are your customer ratings",
                 "Is the customer happy?",
                 "what was the customer feedback?",
                 "How happy are our customers?",

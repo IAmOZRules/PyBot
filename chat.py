@@ -5,7 +5,7 @@ from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
 # use GPU if available else CPU
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # intent_file = input("Enter the name of the intents file: ")
 
@@ -21,7 +21,7 @@ tags = data["tags"]
 model_state = data["model_state"]
 intent_file = data["intent_file"]
 
-with open(intent_file, 'r') as f:
+with open(intent_file, "r") as f:
     intents = json.load(f)
 
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
@@ -61,7 +61,8 @@ def get_response(msg):
     if prob.item() > 0.50:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                print(tag)
+                return random.choice(intent["responses"])
 
     else:
         return "I'm sorry, I do not understand you."
