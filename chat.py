@@ -61,7 +61,6 @@ def get_response(msg):
     if prob.item() > 0.50:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                print(tag)
                 return random.choice(intent["responses"]), tag
 
     else:
