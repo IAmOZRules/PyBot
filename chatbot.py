@@ -27,7 +27,7 @@ if __name__ == "__main__":
                 print(f'{bot_name}: Thank you for visiting! I hope to see you again!\n')
                 break
 
-            response = get_response(sentence)
+            response, _ = get_response(sentence)
             print(f'{bot_name}: {response}\n')
     
     if args.voice:

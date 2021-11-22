@@ -54,7 +54,7 @@ class ChatApplication:
         if not msg:
             return
         
-        if msg == "exit":
+        if msg == "exit" or msg == "goodbye":
             self.window.destroy()
         
         else:
@@ -70,7 +70,8 @@ class ChatApplication:
             self.text_widget.configure(state=DISABLED)
 
             msg2_bot = f"{bot_name}:"
-            msg2_msg = f" {get_response(msg)}\n\n"
+            msg2, _ = get_response(msg)
+            msg2_msg = f" {msg2}\n\n"
             self.text_widget.configure(state=NORMAL)
             self.text_widget.insert(END, msg2_bot, "chatbot")
             self.text_widget.insert(END, msg2_msg)

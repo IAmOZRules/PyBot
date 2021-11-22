@@ -255,8 +255,7 @@
             "patterns": [
                 "What factors might impact your sales?",
                 "What do you think might affect your sales this year?",
-                "How do you think your sales might be affected this year?",
-                "What is affecting your sales?"
+                "How do you think your sales might be affected this year?"
             ],
             "responses": [
                 "Elections are sure to impact our sales this year...",
@@ -286,11 +285,11 @@
             "tag": "customer_satisfaction",
             "patterns": [
                 "How is the customer response?",
+                "What are your customer ratings",
                 "Is the customer happy?",
                 "what was the customer feedback?",
                 "How happy are our customers?",
-                "Are our customers satisfied?",
-                "What are your customer ratings?"
+                "Are our customers satisfied?"
             ],
             "responses": [
                 "Customers were very happy and have given us a rating of 5 stars!",

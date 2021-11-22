@@ -61,7 +61,7 @@ def get_response(msg):
     if prob.item() > 0.50:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                return random.choice(intent['responses']), tag
 
     else:
-        return "I'm sorry, I do not understand you."
+        return "I'm sorry, I do not understand you.", "noans"
