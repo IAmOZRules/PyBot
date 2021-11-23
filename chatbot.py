@@ -1,6 +1,9 @@
 import argparse
 
+import termcolor
+
 arg_parser = argparse.ArgumentParser(usage='python chatbot.py [-h] [options]')
+arg_parser.add_argument('-d', '--verbose', help='Enable Verbose Mode in the ChatBot', default=False, action='store_true')
 arg_parser.add_argument('-g', '--gui', help='Open the ChatBot in GUI Mode', required=False, action='store_true')
 arg_parser.add_argument('-c', '--cli', help='Open the ChatBot in CLI Mode', required=False, action='store_true')
 arg_parser.add_argument('-v', '--voice', help='Open the ChatBot in Voice Chat Mode', required=False, action='store_true')
@@ -27,12 +30,19 @@ if __name__ == "__main__":
                 print(f'{bot_name}: Thank you for visiting! I hope to see you again!\n')
                 break
 
-            response = get_response(sentence)
-            print(f'{bot_name}: {response}\n')
+            response, tag, prob = get_response(sentence)
+            prob = round(prob, 4) * 100
+
+            if args.verbose:
+                tag = termcolor.colored(tag, 'magenta')
+                prob = termcolor.colored(f'({prob}%)', 'yellow')
+                print(f'{bot_name}: [{tag} - {prob}] {response}\n')
+            else:
+                print(f'{bot_name}: {response}\n')
     
     if args.voice:
         from voice import VoiceChat
-        VoiceChat()
+        VoiceChat(args.verbose)
 
     if args.train:
         from train import trainModel

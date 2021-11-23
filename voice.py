@@ -2,6 +2,7 @@ from chat import bot_name, get_response
 from common import *
 
 import speech_recognition as sr
+import termcolor
 import pyttsx3, time
 
 r = sr.Recognizer()
@@ -11,7 +12,7 @@ def TextToSpeech(command):
     engine.say(command)
     engine.runAndWait()
 
-def VoiceChat():
+def VoiceChat(verbose):
     print(greeting)
     while True:
         with sr.Microphone() as source:
@@ -27,9 +28,16 @@ def VoiceChat():
                     print(f'{bot_name}: {response}\n')
                     TextToSpeech(response)
                     break
+                
+                response, tag, prob = get_response(sentence)
+                prob = round(prob, 4) * 100
 
-                response = get_response(sentence)
-                print(f'{bot_name}: {response}\n')
+                if verbose:
+                    tag = termcolor.colored(tag, 'magenta')
+                    prob = termcolor.colored(f'({prob}%)', 'yellow')
+                    print(f'{bot_name}: [{tag} - {prob}] {response}\n')
+                else:
+                    print(f'{bot_name}: {response}\n')
                 TextToSpeech(response)
                     
             except Exception as e:

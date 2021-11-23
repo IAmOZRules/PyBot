@@ -23,6 +23,7 @@ usage: python chatbot.py [-h] [options]
 
 optional arguments:
   -h, --help            show this help message and exit
+  -d, --verbose         Enable Verbose Mode in the ChatBot
   -g, --gui             Open the ChatBot in GUI Mode
   -c, --cli             Open the ChatBot in CLI Mode
   -v, --voice           Open the ChatBot in Voice Chat Mode
@@ -52,6 +53,18 @@ python chatbot.py -t json/covid.json
 python chatbot.py --train json/covid.json
 ```
 
+- To run the chatbot in verbose mode:
+```
+python chatbot.py -d -c
+python chatbot.py --verbose --cli
+```
+
+#### Sample Output for Verbose Mode:
+```
+You: Hello
+PyBot: [greeting - (100.0%)] Hello! Nice to have you here!
+```
+
 ### NOTE:
 - Only ```json``` files are supported for intents.
 
@@ -61,6 +74,7 @@ python chatbot.py --train json/covid.json
 - [x] Combine all tasks into a single CLI ✅
 - [ ] Add support for training multiple intents at once ❌ (Seems dumb, not gonna do it)
 - [x] Voice Input/Output ✅
+- [x] Verbose Mode ✅
 
 ## Contributors
 <table style="width: 100%" >
