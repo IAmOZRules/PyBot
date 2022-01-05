@@ -1,4 +1,4 @@
-nltk==3.6.5
+nltk==3.6.6
 numpy==1.21.4
 prettytable==2.4.0
 pyttsx3==2.90
